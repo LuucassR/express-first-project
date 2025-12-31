@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>All messages</title>
+  </head>
+  <body>
+    <h1>All messages</h1>
+    <ul id="messages">
+      <% messages.forEach((message, index) => { %>
+      <li><%= message.text %> <%= message.user %> <%= message.added %></li>
+      <a href="/message/<%= index %>">open</a>
+      <% }) %>
+    </ul>
+    <a href="/new-message">Create new message</a>
+  </body>
+</html>
